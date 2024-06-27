@@ -1,0 +1,96 @@
+2-Describir las tres componentes de la plataforma Java. Me interesaría que en este punto investiguen un poco acerca de la plataforma 
+(cómo dije en la primera clase: Google is your friend). Lean, investiguen (no hagan copy paste).
+
+2- Los tres componentes de Java son Java Development Kit, Java Runtime Environment y Java Virtual Machine.
+El Java Development Kit (JDK) es una coleccion de herramientas de software que permite desarrollar, compilar y ejercutar aplicaciones Java.
+El Java Virtual Machine (JVM) es una maquina virtual que permite ejecutar un archivo Java linea a linea.
+El Java Runtime Environment (JRE) es un software que necesita los programas Java para ejecutarse correctamente. La JVM junto con su implementacion de 
+bibliotecas estandar forman la JRE, pero no contiene herramientas de desarrollo.
+
+3- ¿Cuál es la diferencia entre JRE y JDK?
+
+3- El JDK es la capa de software situada sobre el JRE. Mientras el JDK contiene un compilador, un depurador y posee otras herramientas de desarrollo, el JRE
+contiene la maquina virtual de Java y las bibliotecas de clase, que respaldan a los archivos.
+
+4-¿Qué es una JVM y cómo funciona?
+
+4- La Java Virtual Machine carga y ejecuta el bytecode de los archivos Java. El bytecode es un conjunto de instrucciones optimizadas que estan diseñadas para ser ejecutadas por la JVM.
+Como funciona:
+Primero, debemos compilar los archivos ".java" con el comando:
+javac archivo.java
+Esto producirá un archivo con extencion ".class", estos archivos.class se componen de bytecode.
+Luego,la JVM es quien interpreta y ejecuta el código bytecode, de tal manera que el dispositivo ya pueda realizar las tareas previamente escritas.
+
+Las tareas que realiza la JVM son:
+1.Verifica el código ByteCode.
+2.Reservar espacio en memoria para las variables y objetos creados.
+3.Libera la memoria no usada (garbage collection). 
+4.Llamado de funciones del dispositivo (APIs nativas)
+
+
+5- ¿Cuáles son los tipos de datos primitivos en Java?
+
+5- Los datos primitivos en Java son:
+byte, short, int, long, float, double: almacenan datos numericos.
+boolean: almacenan datos logicos (true-flase).
+char: almacenan datos de un unico caracter.
+
+6- ¿Cuál es la diferencia entre una variable local y una variable de instancia?
+
+6- Una variable local se declara dentro de un metodo y su utilidad termina cuando el metodo termina de ejecutarse, miestras que una variable de instancia se declara
+dentro de una clase pero fuera de un metodo, su utilidad permanece mientras el objeto a la que esta vinculado exista en la memoria.
+
+7-Describir el concepto de Heap y su importancia para las aplicaciones Java.
+
+7- La Memory Heap es una región de la memoria utilizada por las aplicaciones Java para almacenar objetos dinámicos, es decir, 
+aquellos objetos creados durante la ejecución del programa en lugar de estar definidos estáticamente en el código. 
+Es importante ya que perminte una mayor flexibilidad y eficiencia durante la ejecucion de POO, ademas de poseer una gestion automatica de memoria que permite liberar
+memoria por objetos no utilizados.
+
+8- ¿Cuáles son los modificadores de acceso en Java y qué hacen?
+
+8-Los modificadores de Java son:
+public: Permite el acceso desde cualquier parte del programa.
+protected: Permite el acceso desde la misma clase, clases del mismo paquete y clases hijas (subclases) tanto dentro como fuera del paquete.
+default (package-private): Permite el acceso solo desde las clases del mismo paquete.
+private: Limita el acceso solo a la clase en la que están declarados los miembros.
+
+9- ¿Qué otro tipo de modificadores existen en Java? ¿Para qué sirven?
+
+9- Otros tipos de modificadores:
+static: se utiliza para crear variables y métodos estáticos que pertenecen a la clase en lugar de instancias individuales de la clase.
+final: se puede aplicar a clases, variables y métodos. Cuando se aplica a una clase, indica que la clase no se puede heredar.
+abstract: se aplica a clases y métodos. Cuando se aplica a una clase, indica que la clase es abstracta y no se puede instanciar directamente.
+synchronized:  se utiliza para controlar la concurrencia en aplicaciones multi-hilo.
+valotile:  se utiliza para variables que pueden ser modificadas por múltiples hilos.
+
+10- ¿Qué son los paquetes en Java y cómo se utilizan?
+
+10. Los paquetes en Java son una forma de organizar y estructurar clases y otros elementos relacionados dentro de un proyecto.
+
+
+11- ¿Cuál es el alcance de una variable local y cómo se define?
+
+11- El alcance de una variable local es dentro del metodo donde fue declarada.
+Ejemplo de declaracion: int numero = 15;
+
+
+12- ¿Cuál es el propósito del método main() en Java?
+
+12- Cuando se ejecuta un programa de Java, la JVM va a buscar el metodo main() para inicializar el programa y comenzar su ejecucion desde alli.
+
+13- ¿Qué son los constructores en Java y cómo se utilizan?
+
+13-Los constructores en Java son métodos especiales que se utilizan para inicializar objetos de una clase. Tienen el mismo nombre que la clase y no tienen un tipo de retorno 
+explícito. Los constructores se utilizan principalmente para asignar valores iniciales a los miembros de datos de un objeto y para realizar cualquier otra inicialización 
+necesaria cuando se crea una instancia de la clase.
+
+
+14- ¿Cuál es la diferencia entre una clase abstracta y una interfaz en Java?
+
+14- Una clase abstracta es una clase que no se puede instanciar directamente, es decir, no se pueden crear objetos de una clase abstracta. 
+Su propósito principal es servir como una plantilla o base para otras clases que la extiendan. Se declara utilizando la palabra clave "abstract".
+Una interfaz en Java define un conjunto de métodos abstractos (sin implementación) que una clase concreta (que implementa la interfaz) debe proporcionar.
+Se declara utilizando la palabra clave "interface".
+
+
