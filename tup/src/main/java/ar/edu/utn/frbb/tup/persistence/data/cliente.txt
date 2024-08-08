@@ -1,0 +1,6 @@
+DNI, Nombre, Apellido, Fecha nacimiento, Banco, Tipo Persona, Fecha alta
+12345677,PEPsi,paredes,2002-02-12,santander rio,PERSONA_JURIDICA,2024-08-05
+48765432,marta,martinez,1990-09-29,banelco,PERSONA_FISICA,2024-08-05
+44417966,matias,gonzalez,1990-09-29,santander rio,PERSONA_FISICA,2024-08-05
+44417965,matias,gonzalez,1990-09-29,a,PERSONA_FISICA,2024-08-06
+44417964,matias,gonzalez,1990-09-29,galicia,PERSONA_FISICA,2024-08-06
