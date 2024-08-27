@@ -11,6 +11,8 @@ import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 
+import static ar.edu.utn.frbb.tup.presentation.modelDto.CuentaDto.*;
+
 @Repository
 public class CuentaDao extends BaseDao<Cuenta>{
     private final String RUTA_ARCHIVO = "src/main/java/ar/edu/utn/frbb/tup/persistence/data/cuenta.txt";
