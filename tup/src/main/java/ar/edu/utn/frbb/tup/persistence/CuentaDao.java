@@ -8,9 +8,7 @@ import org.springframework.stereotype.Repository;
 
 import java.io.*;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 @Repository
