@@ -1,17 +1,3 @@
-estado, mesaje, numero de cuotas, monto de las cuotas , plazos meses, monto del prestamo, moneda asociada la prestamo
-2613,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,52,4,200,DOLARES
-2613,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,52,4,200,DOLARES
-2613,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,131,4,500,DOLARES
-2613,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,131,4,500,DOLARES
-2613,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,131,4,500,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,131,4,500,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,131,4,500,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,315,4,1200,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,DOLARES
-1499,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,DOLARES
-5814,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,PESOS
+nro de la cuenta, estado, mesaje, numero de cuotas, monto de las cuotas , plazos meses, monto del prestamo, moneda asociada la prestamo
 5814,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,PESOS
 5814,APROBADO,El monto del préstamo fue acreditado en su cuenta,1,183,4,700,PESOS

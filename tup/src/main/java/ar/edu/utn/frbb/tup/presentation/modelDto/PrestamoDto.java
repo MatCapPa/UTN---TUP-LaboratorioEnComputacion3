@@ -5,7 +5,7 @@ public class PrestamoDto {
     private int plazosMeses;
     private long montoDelPrestamo;
     private String moneda;
-
+    //numero de la cuenta a la que esta asociada el prestamo
     public void setNroCuenta(long nroCuenta) {
         this.nroCuenta = nroCuenta;
     }

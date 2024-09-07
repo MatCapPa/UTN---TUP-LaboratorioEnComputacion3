@@ -9,6 +9,7 @@ import ar.edu.utn.frbb.tup.persistence.PrestamoDao;
 import ar.edu.utn.frbb.tup.presentation.modelDto.PrestamoDto;
 import org.springframework.stereotype.Service;
 
+import java.util.Objects;
 import java.util.Set;
 
 @Service
@@ -38,7 +39,7 @@ public class PrestamoService {
 
         //verifico que el prestamo sea en la misma moneda
         if (prestamo.getMoneda() != cuenta.getMoneda()){
-            throw new CuentaNoEncontradaException("Error. Esta realizando un prestamo con una moneda distinta. \nMoneda de la cuenta: " + cuenta.getMoneda());
+            throw new CuentaNoEncontradaException("Error. Esta realizando un prestamo con una moneda distinta. Moneda de la cuenta: " + cuenta.getMoneda());
         }
 
         //establesco el valor de cada cuota
@@ -46,7 +47,7 @@ public class PrestamoService {
 
         //el scoreCrediticioService genera un numero random y segun ese numero se realiza el prestamo o no
         scoreCrediticioService.verificarCalificacionCreditaria(prestamo);
-        if (prestamo.getEstado() == "APROBADO"){
+        if (Objects.equals(prestamo.getEstado(), "APROBADO")){
             prestamo.setMensaje("El monto del préstamo fue acreditado en su cuenta");
 
             //se suma el dinero del prestamo a la cuenta

@@ -14,7 +14,7 @@ public class Prestamo {
     private TipoMoneda moneda;
 
     public Prestamo(){
-
+//numero de la cuenta a la que esta asociada el prestamo
     }
 
     public Prestamo(PrestamoDto prestamoDto){

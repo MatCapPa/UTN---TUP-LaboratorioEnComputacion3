@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import java.io.*;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
-
-import static ar.edu.utn.frbb.tup.presentation.modelDto.CuentaDto.*;
 
 @Repository
 public class CuentaDao extends BaseDao<Cuenta>{
@@ -45,9 +45,11 @@ public class CuentaDao extends BaseDao<Cuenta>{
         return cuenta;
     }
 
+
+    //esta funcion solo se utiliza para borrar la cuenta a la que se le esta otorgando el prestamo para actualizar el saldo.
     public void deleteCuenta(long nroCuenta){
         try {
-            StringBuilder contenido = new StringBuilder(); //Creo el contenido para guardar todo lo leido
+            StringBuilder contenido = new StringBuilder(); //Se crea el contenido del archivo
 
             FileReader fileReader = new FileReader(RUTA_ARCHIVO);
             BufferedReader reader = new BufferedReader(fileReader);
