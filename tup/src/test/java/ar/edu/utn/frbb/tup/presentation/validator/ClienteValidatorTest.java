@@ -47,8 +47,8 @@ public class ClienteValidatorTest {
     @Test
     public void testClienteSinApellidoException(){
         ClienteDto clienteDto = new ClienteDto();
-        //clienteDto.setNombre("Nicolas");
-        clienteDto.setApellido("Gonzalez");
+        clienteDto.setNombre("Nicolas");
+        //clienteDto.setApellido("Gonzalez");
         clienteDto.setTipoPersona("F");
         clienteDto.setBanco("Provincia");
         clienteDto.setFechaNacimiento("2002-09-15");
@@ -57,5 +57,68 @@ public class ClienteValidatorTest {
         assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
     }
 
+    @Test
+    public void testClienteSinTipoPersonaException(){
+        ClienteDto clienteDto = new ClienteDto();
+        clienteDto.setNombre("Nicolas");
+        clienteDto.setApellido("Gonzalez");
+        //clienteDto.setTipoPersona("F");
+        clienteDto.setBanco("Provincia");
+        clienteDto.setFechaNacimiento("2002-09-15");
+        clienteDto.setDni(44111222);
 
+        assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
+    }
+
+    @Test
+    public void testClienteSinBancoException(){
+        ClienteDto clienteDto = new ClienteDto();
+        clienteDto.setNombre("Nicolas");
+        clienteDto.setApellido("Gonzalez");
+        clienteDto.setTipoPersona("F");
+        //clienteDto.setBanco("Provincia");
+        clienteDto.setFechaNacimiento("2002-09-15");
+        clienteDto.setDni(44111222);
+
+        assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
+    }
+
+    @Test
+    public void testClienteSinFechaDeNacimientoException(){
+        ClienteDto clienteDto = new ClienteDto();
+        clienteDto.setNombre("Nicolas");
+        clienteDto.setApellido("Gonzalez");
+        clienteDto.setTipoPersona("F");
+        clienteDto.setBanco("Provincia");
+        //clienteDto.setFechaNacimiento("2002-09-15");
+        clienteDto.setDni(44111222);
+
+        assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
+    }
+
+    @Test
+    public void testClienteSinDNI(){
+        ClienteDto clienteDto = new ClienteDto();
+        clienteDto.setNombre("Nicolas");
+        clienteDto.setApellido("Gonzalez");
+        clienteDto.setTipoPersona("F");
+        clienteDto.setBanco("Provincia");
+        clienteDto.setFechaNacimiento("2002-09-15");
+        //clienteDto.setDni(44111222);
+
+        assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
+    }
+
+    @Test
+    public void testClienteConDniInvalido(){
+        ClienteDto clienteDto = new ClienteDto();
+        clienteDto.setNombre("Nicolas");
+        clienteDto.setApellido("Gonzalez");
+        clienteDto.setTipoPersona("F");
+        clienteDto.setBanco("Provincia");
+        clienteDto.setFechaNacimiento("2002-09-15");
+        clienteDto.setDni(84111222); //el dni tiene que ser mayor de 10.000.000 y menor de 80.000.000
+
+        assertThrows(IllegalArgumentException.class, () -> clienteValidator.validateCliente(clienteDto));
+    }
 }
